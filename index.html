@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elementos de Bloco e Em Linha | Guia Completo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 font-sans min-h-screen flex flex-col transition-colors duration-200">
+
+  <!-- Cabeçalho / Barra de Navegação -->
+  <header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <span class="bg-gradient-to-r from-blue-600 to-red-600 text-white font-bold px-3 py-1.5 rounded-lg text-lg">HTML</span>
+        <span class="font-extrabold text-lg tracking-tight hidden sm:inline">Bloco e Em Linha</span>
+      </a>
+
+      <nav class="flex items-center gap-4 sm:gap-6 text-sm font-medium">
+        <a href="#bloco" class="hover:text-blue-600 dark:hover:text-blue-400">Bloco</a>
+        <a href="#em-linha" class="hover:text-red-600 dark:hover:text-red-400">Em Linha</a>
+        <a href="#div-element" class="hover:text-blue-600 dark:hover:text-blue-400">&lt;div&gt;</a>
+        <a href="#span-element" class="hover:text-red-600 dark:hover:text-red-400">&lt;span&gt;</a>
+      </nav>
+
+      <button id="themeToggle" class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-xs font-bold border border-slate-200 dark:border-slate-700">
+        <span class="dark:hidden">Escuro</span>
+        <span class="hidden dark:inline">Claro</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal do Artigo -->
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-10 flex-grow w-full space-y-12">
+
+    <!-- Título Principal do Tutorial -->
+    <div class="border-b border-slate-200 dark:border-slate-800 pb-6">
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+        Elementos HTML em Bloco e em Linha
+      </h1>
+      <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+        Cada elemento HTML possui um valor de exibição padrão (<code>display</code>), dependendo do tipo de elemento que é. Os dois valores de exibição mais comuns são <strong>bloco (block)</strong> e <strong>em linha (inline)</strong>.
+      </p>
+    </div>
+
+    <!-- SEÇÃO 1: Elementos em Bloco -->
+    <section id="bloco" class="space-y-6">
+      <h2 class="text-2xl font-bold flex items-center gap-2 text-blue-600 dark:text-blue-400">
+        ☐ Elementos ao Nível de Bloco
+      </h2>
+      
+      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+        Um elemento ao nível de bloco começa sempre numa <strong>nova linha</strong> e o navegador adiciona automaticamente alguma margem (espaço) antes e depois do elemento.
+      </p>
+      
+      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+        Um elemento ao nível de bloco ocupa sempre toda a <strong>largura disponível</strong> (estende-se para a esquerda e para a direita até onde conseguir).
+      </p>
+
+      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+        Dois elementos em bloco muito utilizados são: <code>&lt;p&gt;</code> e <code>&lt;div&gt;</code>.
+      </p>
+
+      <ul class="list-disc pl-6 space-y-2 text-slate-700 dark:text-slate-300">
+        <li>O elemento <code>&lt;p&gt;</code> define um parágrafo num documento HTML.</li>
+        <li>O elemento <code>&lt;div&gt;</code> define uma divisão ou uma secção num documento HTML.</li>
+      </ul>
+
+      <!-- Exemplo Visual W3Schools -->
+      <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-3">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Demonstração</h3>
+        <div class="w3-outline-block">O elemento &lt;p&gt; é um elemento ao nível de bloco.</div>
+        <div class="w3-outline-block">O elemento &lt;div&gt; é um elemento ao nível de bloco.</div>
+      </div>
+
+      <!-- Botão para Ficheiro Separado -->
+      <div>
+        <a href="exemplo1.html" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2.5 rounded-lg text-sm transition-all shadow-md">
+          <i class="fa-solid fa-arrow-right"></i> Ver Exemplo de Bloco (exemplo1.html)
+        </a>
+      </div>
+
+      <!-- Lista Completa de Tags de Bloco -->
+      <div class="space-y-3 pt-4">
+        <h3 class="font-bold text-sm text-slate-700 dark:text-slate-300">Aqui estão todos os elementos ao nível de bloco em HTML:</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 font-mono text-xs">
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;address&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;article&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;aside&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;blockquote&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;canvas&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;dd&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;div&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;dl&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;dt&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;fieldset&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;figcaption&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;figure&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;footer&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;form&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;h1&gt;-&lt;h6&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;header&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;hr&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;li&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;main&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;nav&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;noscript&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;ol&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;p&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;pre&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;section&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;table&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;tfoot&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;ul&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-blue-600 dark:text-blue-400 font-semibold">&lt;video&gt;</div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-slate-200 dark:border-slate-800">
+
+    <!-- SEÇÃO 2: Elementos Em Linha -->
+    <section id="em-linha" class="space-y-6">
+      <h2 class="text-2xl font-bold flex items-center gap-2 text-red-600 dark:text-red-400">
+        ➜ Elementos em Linha
+      </h2>
+      
+      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+        Um elemento em linha <strong>não começa</strong> numa nova linha.
+      </p>
+      
+      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+        Um elemento em linha ocupa apenas a largura estritamente necessária para o seu conteúdo.
+      </p>
+
+      <!-- Exemplo Visual W3Schools Inline -->
+      <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-3">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Demonstração</h3>
+        <p class="text-slate-800 dark:text-slate-100">
+          Isto é <span class="w3-outline-inline">um elemento &lt;span&gt; em linha</span> dentro de um parágrafo.
+        </p>
+      </div>
+
+      <!-- Botão para Ficheiro Separado -->
+      <div>
+        <a href="exemplo2.html" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-2.5 rounded-lg text-sm transition-all shadow-md">
+          <i class="fa-solid fa-arrow-right"></i> Ver Exemplo em Linha (exemplo2.html)
+        </a>
+      </div>
+
+      <!-- Lista Completa de Tags Inline -->
+      <div class="space-y-3 pt-4">
+        <h3 class="font-bold text-sm text-slate-700 dark:text-slate-300">Aqui estão todos os elementos em linha em HTML:</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 font-mono text-xs">
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;a&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;abbr&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;acronym&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;b&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;bdo&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;big&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;br&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;button&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;cite&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;code&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;dfn&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;em&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;i&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;img&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;input&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;kbd&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;label&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;map&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;object&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;output&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;q&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;samp&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;script&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;select&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;small&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;span&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;strong&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;sub&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;sup&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;textarea&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;time&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;tt&gt;</div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 rounded text-center text-red-600 dark:text-red-400 font-semibold">&lt;var&gt;</div>
+        </div>
+      </div>
+
+      <!-- Caixa de Aviso Amarela -->
+      <div class="bg-amber-100 dark:bg-amber-950/60 border-l-4 border-amber-500 p-4 rounded-r-lg text-amber-900 dark:text-amber-200 text-sm font-semibold">
+        <strong>Nota:</strong> Um elemento em linha não pode conter um elemento ao nível de bloco!
+      </div>
+    </section>
+
+    <hr class="border-slate-200 dark:border-slate-800">
+
+    <!-- SEÇÃO 3: O Elemento <div> -->
+    <section id="div-element" class="space-y-6">
+      <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">
+        Elemento <code>&lt;div&gt;</code>
+      </h2>
+      
+      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+        O elemento <code>&lt;div&gt;</code> é frequentemente utilizado como um contêiner para outros elementos HTML.
+      </p>
+
+      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+        O elemento <code>&lt;div&gt;</code> não tem atributos obrigatórios, mas os atributos <code>style</code>, <code>class</code> e <code>id</code> são muito comuns.
+      </p>
+
+      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+        Quando utilizado em conjunto com CSS, o elemento <code>&lt;div&gt;</code> pode ser usado para estilizar blocos de conteúdo:
+      </p>
+
+      <!-- Botão para Ficheiro Separado -->
+      <div>
+        <a href="exemplo3.html" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2.5 rounded-lg text-sm transition-all shadow-md">
+          <i class="fa-solid fa-arrow-right"></i> Ver Exemplo &lt;div&gt; (exemplo3.html)
+        </a>
+      </div>
+    </section>
+
+    <hr class="border-slate-200 dark:border-slate-800">
+
+    <!-- SEÇÃO 4: O Elemento <span> -->
+    <section id="span-element" class="space-y-6">
+      <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">
+        Elemento <code>&lt;span&gt;</code>
+      </h2>
+      
+      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+        O elemento <code>&lt;span&gt;</code> é um contêiner em linha utilizado para marcar uma parte de um texto ou de um documento.
+      </p>
+
+      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+        O elemento <code>&lt;span&gt;</code> não tem atributos obrigatórios, mas <code>style</code>, <code>class</code> e <code>id</code> são muito comuns.
+      </p>
+
+      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+        Quando utilizado em conjunto com CSS, o elemento <code>&lt;span&gt;</code> pode ser utilizado para estilizar partes específicas do texto:
+      </p>
+
+      <!-- Botão para Ficheiro Separado -->
+      <div>
+        <a href="exemplo4.html" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-2.5 rounded-lg text-sm transition-all shadow-md">
+          <i class="fa-solid fa-arrow-right"></i> Ver Exemplo &lt;span&gt; (exemplo4.html)
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 mt-auto">
+    <div class="max-w-5xl mx-auto px-4 text-center text-xs text-slate-500 dark:text-slate-400 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div class="flex flex-wrap items-center justify-center gap-2">
+        <span class="font-bold text-slate-700 dark:text-slate-300">Site educativo construído com base nas especificações do W3Schools HTML Block & Inline Elements • Feito por Martim Silva</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://www.w3schools.com/html/html_blocks.asp" target="_blank" rel="noopener" class="hover:text-blue-500 underline flex items-center gap-1">
+          <span>W3Schools Tutorial</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>
