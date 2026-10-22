@@ -1,2 +1,2 @@
-Link : https://a117450-cell.github.io/HTMLGuia/
+Link : 
 Guia completo e estilizado HTML para um trabalho.. 
