@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tags Semânticas | Guia completo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 font-sans min-h-screen flex flex-col transition-colors duration-200 overflow-x-hidden">
+
+  <!-- Cabeçalho / Barra de Navegação -->
+  <header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <span class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold px-3 py-1.5 rounded-lg text-lg">HTML</span>
+        <span class="font-extrabold text-lg tracking-tight hidden sm:inline">Tags Semânticas</span>
+      </a>
+
+      <nav class="flex items-center gap-4 sm:gap-6 text-sm font-medium">
+        <a href="index.html" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Início</a>
+        <a href="#o-que-e" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Conceito</a>
+        <a href="#principais-tags" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Principais Tags</a>
+      </nav>
+
+      <button id="themeToggle" class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-xs font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+        <span class="dark:hidden">Escuro</span>
+        <span class="hidden dark:inline">Claro</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-10 flex-grow w-full space-y-12">
+
+    <!-- Introdução -->
+    <div id="o-que-e" class="reveal opacity-0 translate-y-8 transition-all duration-700 ease-out border-b border-slate-200 dark:border-slate-800 pb-6">
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4 text-emerald-600 dark:text-emerald-400">
+        O que são tags semânticas?
+      </h1>
+      <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed mb-4">
+        Uma tag semântica transmite significado claro tanto para o desenvolvedor como para o navegador/motores de busca. Em vez de usar div para tudo, as tags semânticas descrevem exatamente a função do conteúdo.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm mt-4">
+        <div class="p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
+          <span class="font-bold text-red-500 block mb-1">Exemplo de não semântico:</span>
+          <p class="text-xs"><code>&lt;div id="header"&gt;</code> ou <code>&lt;span class="titulo"&gt;</code></p>
+        </div>
+        <div class="p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-lg">
+          <span class="font-bold text-emerald-500 block mb-1">Exemplo de semântico:</span>
+          <p class="text-xs"><code>&lt;header&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, ETC</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lista explicativa das Tags -->
+    <section id="principais-tags" class="reveal opacity-0 translate-y-8 transition-all duration-700 ease-out space-y-8">
+      <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">
+        Principais tags semânticas e Exemplos
+      </h2>
+
+      <!-- Card: <header> & <nav> -->
+      <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 space-y-4 shadow-sm">
+        <h3 class="text-lg font-bold text-emerald-600 dark:text-emerald-400">1. <code>&lt;header&gt;</code> e <code>&lt;nav&gt;</code></h3>
+        <p class="text-sm text-slate-700 dark:text-slate-300">
+          O <code>&lt;header&gt;</code> representa o cabeçalho de uma página ou secção. O <code>&lt;nav&gt;</code> é usado para blocos de links de navegação principais.
+        </p>
+
+        <!-- Bloco de código -->
+        <div class="space-y-2">
+          <h4 class="font-bold text-xs text-slate-400 uppercase">Exemplo de Código:</h4>
+          <pre class="bg-black text-slate-100 p-4 rounded-lg text-sm overflow-x-auto"><code>&lt;header&gt;
+  &lt;h1&gt;Meu Blog&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;a href="#home"&gt;Início&lt;/a&gt;
+    &lt;a href="#sobre"&gt;Sobre&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+        </div>
+      </div>
+
+      <!-- Card: <main>, <article> & <section> -->
+      <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 space-y-4 shadow-sm">
+        <h3 class="text-lg font-bold text-emerald-600 dark:text-emerald-400">2. <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code> e <code>&lt;section&gt;</code></h3>
+        <ul class="list-disc pl-5 text-sm text-slate-700 dark:text-slate-300 space-y-1">
+          <li><code>&lt;main&gt;</code>: Conteúdo principal e exclusivo do documento.</li>
+          <li><code>&lt;article&gt;</code>: Conteúdo autónomo (ex: post de blog, notícia).</li>
+          <li><code>&lt;section&gt;</code>: Agrupamento temático de conteúdos.</li>
+        </ul>
+
+        <div class="space-y-2">
+          <h4 class="font-bold text-xs text-slate-400 uppercase">Exemplo de Código:</h4>
+          <pre class="bg-black text-slate-100 p-4 rounded-lg text-sm overflow-x-auto"><code>&lt;main&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Notícia do Dia&lt;/h2&gt;
+    &lt;p&gt;Texto do artigo...&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;</code></pre>
+        </div>
+      </div>
+
+      <!-- Card: <aside> & <footer> -->
+      <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 space-y-4 shadow-sm">
+        <h3 class="text-lg font-bold text-emerald-600 dark:text-emerald-400">3. <code>&lt;aside&gt;</code> e <code>&lt;footer&gt;</code></h3>
+        <p class="text-sm text-slate-700 dark:text-slate-300">
+          O <code>&lt;aside&gt;</code> guarda conteúdo secundário/lateral (ex: sidebars, publicidade). O <code>&lt;footer&gt;</code> define o rodapé da página ou secção.
+        </p>
+
+        <div class="space-y-2">
+          <h4 class="font-bold text-xs text-slate-400 uppercase">Exemplo de Código:</h4>
+          <pre class="bg-black text-slate-100 p-4 rounded-lg text-sm overflow-x-auto"><code>&lt;aside&gt;
+  &lt;h3&gt;Links Úteis&lt;/h3&gt;
+&lt;/aside&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;&amp;copy; 2026 Todos os direitos reservados.&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+        </div>
+      </div>
+
+    </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 mt-auto">
+    <div class="max-w-5xl mx-auto px-4 text-center text-xs text-slate-500 dark:text-slate-400 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div class="flex flex-wrap items-center justify-center gap-2">
+        <span class="font-bold text-slate-700 dark:text-slate-300">Guia de Tags Semânticas HTML5 • Construído para a comunidade</span>
+      </div>
+      <div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0', 'translate-y-8');
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+          } else {
+            entry.target.classList.remove('opacity-100', 'translate-y-0');
+            entry.target.classList.add('opacity-0', 'translate-y-8');
+          }
+        });
+      }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
